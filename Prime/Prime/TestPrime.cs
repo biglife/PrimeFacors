@@ -53,6 +53,12 @@ namespace Prime
         {
             CollectionAssert.AreEqual(new List<int> { 3,3 }, PrimeFactor.Generate(9));
         }
+
+        [TestMethod]
+        public void return_for_bigdata()
+        {
+            CollectionAssert.AreEqual(new List<int> { 2,3,7,11,13,17}, PrimeFactor.Generate(2*3*7*11*13*17));
+        }
     }
 
     
