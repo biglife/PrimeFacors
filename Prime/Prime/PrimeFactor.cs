@@ -8,7 +8,7 @@ namespace Prime
         public static List<int> Generate(int input)
         {
             var factors = new List<int>();
-            if (input%2 == 0)
+            while (input%2 == 0)
             {
                 factors.Add(2);
                 input = input/2;
