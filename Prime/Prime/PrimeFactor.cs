@@ -8,11 +8,16 @@ namespace Prime
         public static List<int> Generate(int input)
         {
             var factors = new List<int>();
-            for (; input % 2 == 0; input = input / 2)
+            var candidate = 2;
+            while (input > 1)
             {
-                factors.Add(2);
+                for (; input % candidate == 0; input = input / candidate)
+                {
+                    factors.Add(candidate);
+                }
+                candidate++;
             }
-            if (input > 1) factors.Add(input);
+
             return factors;
         }
     }
