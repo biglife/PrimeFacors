@@ -35,6 +35,12 @@ namespace Prime
         {
             CollectionAssert.AreEqual(new List<int> { 2,2 }, PrimeFactor.Generate(4));
         }
+
+        [TestMethod]
+        public void return_2_3_for_6()
+        {
+            CollectionAssert.AreEqual(new List<int> { 2, 3 }, PrimeFactor.Generate(6));
+        }
     }
 
     
