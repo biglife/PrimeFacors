@@ -8,7 +8,7 @@ namespace Prime
         public static List<int> Generate(int input)
         {
             var factors = new List<int>();
-            if (input == 2) factors.Add(2);
+            if (input > 1) factors.Add(input);
             return factors;
         }
     }
