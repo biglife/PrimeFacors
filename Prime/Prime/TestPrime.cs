@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Prime
@@ -15,12 +13,19 @@ namespace Prime
         {
             CollectionAssert.AreEqual(new List<int>(), PrimeFactor.Generate(1));
         }
+
+        [TestMethod]
+        public void return_2_for_2()
+        {
+            CollectionAssert.AreEqual(new List<int>{2}, PrimeFactor.Generate(2));
+        }
     }
 
     public class PrimeFactor
     {
         public static List<int> Generate(int input)
         {
+            if(input==2) return  new List<int>{2};
             return new List<int>();
         }
     }
